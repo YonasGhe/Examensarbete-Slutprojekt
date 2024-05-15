@@ -1,0 +1,102 @@
+
+.wc-block-product-template {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Adjust margin for product items */
+.wp-block-columns.are-vertically-aligned-center.is-layout-flex.wp-container-core-columns-is-layout-1.wp-block-columns-is-layout-flex .wc-block-product-template__responsive li {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+/* Only apply margin to product items within .wc-block-product-template__responsive */
+.wp-block-columns.are-vertically-aligned-center.is-layout-flex.wp-container-core-columns-is-layout-1.wp-block-columns-is-layout-flex .wc-block-product-template__responsive .wc-block-product-template__responsive li {
+    margin: 20px; /* Apply margin only to product items */
+}
+
+/* Style for product images */
+.wc-block-product-template__responsive li img {
+    max-width: 100%;
+    max-height: 200px; /* Adjust maximum height */
+    border-radius: 5px;
+}
+
+/* Style for product names */
+.wc-block-product-template__responsive li h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Style for product prices */
+.wc-block-product-template__responsive li .wp-block-woocommerce-product-price {
+    font-size: 1rem;
+    color: #000 !important;
+    
+}
+
+/* Style for add to cart buttons */
+.wc-block-product-template__responsive li .wp-block-button__link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect for add to cart buttons */
+.wc-block-product-template__responsive li .wp-block-button__link:hover {
+    background-color: #0056b3;
+}
+
+.wc-block-product-categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.wc-block-product-categories-list-item {
+    margin-right: 30px; 
+    margin-bottom: 10px;
+    border-radius: 100px; 
+    background-color: #333;
+    overflow: hidden;
+    margin: 30px; 
+}
+
+.wc-block-product-categories-list-item a {
+    text-decoration: none;
+    color:whitesmoke; 
+    font-size: large;
+}
+
+.wc-block-product-categories-list-item-count {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: darkturquoise; 
+    font-size: large;
+}
+
+.wc-block-product-categories-list-item a:hover {
+    color: darkturquoise; 
+}
+.wc-block-product-categories-list-item:hover:before {
+    background-color: rgba(0, 0, 0, 0.1); 
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .wc-block-product-template__responsive li {
+        flex: 0 0 100%; 
+    }
+}
+
+
+

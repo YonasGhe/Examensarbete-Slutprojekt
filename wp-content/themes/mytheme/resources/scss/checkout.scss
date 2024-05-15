@@ -1,0 +1,148 @@
+
+
+.woocommerce {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    #wc-stripe-payment-request-button-separator {
+        display: none !important;
+    }
+
+    .woocommerce-checkout {
+        display: flex;
+        width: 95%;
+        padding: 10px;
+        background-color: #f7f4ed8e;
+
+        .col2-set {
+            width: 50%;
+
+            .col-1 {
+                width: 100%;
+
+                .woocommerce-billing-fields {
+                    margin-left: 10px;
+                    margin-right: 15px;
+
+                    h3 {
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    .woocommerce-billing-fields__field-wrapper {
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        border: 1px solid #bebcbc;
+                        border-radius: 5px;
+                        padding: 10px 20px;
+
+                        .form-row-first,
+                        .form-row-last,
+                        .form-row-wide,
+                        .update_totals_on_change {
+                            label {
+                                font-family: 'Courier New', Courier, monospace;
+                            }
+
+                            .input-text {
+                                background-color: #fff;
+                                border: none;
+                                padding: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-2 {
+                display: none;
+            }
+        }
+
+        #order_review {
+            width: 50%;
+            margin-right: 30px;
+            margin-left: 15px;
+            padding-top: 30px; 
+
+            .woocommerce-checkout-review-order-table {
+                border: 1px solid #bebcbc;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+                thead tr {
+                    .product-name {
+                        margin: auto;
+                        padding: auto;
+                        
+                    }
+
+                }
+
+                tbody .cart_item {
+                    .product-name {
+                        border: none;
+                        margin: auto;
+
+                    }
+
+                    .product-total {
+                        border: none;
+                        
+                    }
+                }
+            }
+
+            .woocommerce-checkout-payment {
+                border: 1px solid #ccc;
+                margin-bottom: 60px;
+                background-color: transparent;
+
+                .wc_payment_methods {
+                    .payment_method_cod,
+                    .payment_method_stripe {
+
+                        .payment_box {
+                            border: 1px solid  #bebcbc;
+                            background-color: #dbd0cc5d;
+
+                            p {
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+
+                .place-order {
+                    .woocommerce-terms-and-conditions-wrapper {
+                        .woocommerce-privacy-policy-text {
+                            margin: auto;
+                        }
+                    }
+
+                    #place_order {
+                        padding: 20px 80px;
+                        background-color: #000000ad;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #847f7f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #order_review_heading {
+        position: absolute;
+        top: 0;
+        right: 30rem; 
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px; 
+        z-index: 999; 
+    }
+
+    #order_review {
+        margin-top: 25px; 
+
+        }
+}
