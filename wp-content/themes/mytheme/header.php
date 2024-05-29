@@ -12,24 +12,30 @@
         <div class="primary-menu">
             <ul>
                 <?php
+                // Display the main menu
                 wp_nav_menu(
                     array(
-                        'theme_location' => 'Header',
+                        'theme_location' => 'header',
                         'menu_class'     => 'primary-menu',
                         'container'      => false,
                     )
                 );
                 ?>
+                <!-- Use your custom shortcodes for the icons -->
                 <li class="menu-item menu-item-cart">
-                    <a href="<?php echo esc_url( home_url( '/?s=' ) ); ?>" class="cart-icon"><img src="/wp-content/themes/mytheme/resources/images/Cart.png" alt="Cart"></a>
+                    <?php echo do_shortcode('[cart_icon]'); ?>
                 </li>
                 <li class="menu-item menu-item-account">
-                    <a href="<?php echo esc_url( wc_get_account_endpoint_url( 'dashboard' ) ); ?>" class="account-icon"><img src="/wp-content/themes/mytheme/resources/images/Group-40.png" alt="My Account"></a>
+                    <?php echo do_shortcode('[account_icon]'); ?>
                 </li>
                 <li class="menu-item menu-item-heart">
-                    <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="heart-icon"><img src="/wp-content/themes/mytheme/resources/images/Group.png" alt="Heart"></a>
+                    <?php echo do_shortcode('[heart_icon]'); ?>
                 </li>
             </ul>
         </div>
     </nav>
 </header>
+
+<?php wp_footer(); ?>
+</body>
+</html>

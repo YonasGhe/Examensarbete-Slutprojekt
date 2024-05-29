@@ -1,0 +1,42 @@
+.wp-block-media-text {
+    background-color: rgb(28, 27, 27);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.wp-block-media-text__media {
+    text-align: center;
+    max-width: 50%; 
+    margin: 0 auto; 
+}
+.wp-block-media-text__media img {
+    max-width: 100%; 
+    width: 100%; 
+    height: auto;
+   text-align: center;
+}
+
+.wp-block-media-text__content {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    color: #fff;
+}
+
+.wp-block-preformatted {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px; 
+    line-height: 1.6;
+}
+.wp-block-preformatted strong {
+    font-size: 24px; 
+    color: #fff;
+}
+
+
+.is-vertically-aligned-center {
+    text-align: center;
+}

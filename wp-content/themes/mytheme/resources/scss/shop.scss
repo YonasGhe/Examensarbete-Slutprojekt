@@ -1,50 +1,50 @@
-
-
 ul.products {
     list-style-type: none;
-    margin: 10px !important; 
+    margin: 20px !important;
     padding: 0;
-   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-
 
 ul.products li.product {
-    display: inline-block;
-    width: 25%; 
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%; 
     text-align: center;
     background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
 }
 
-
 ul.products li.product img {
-    max-width: 200px; 
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 5px;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto 10px; 
 }
 
-
 ul.products li.product h2.woocommerce-loop-product__title {
-    margin-top: 10px;
+    margin: 10px 0;
     font-size: 16px;
 }
 
-
 ul.products li.product .price {
     font-size: 14px;
-    color: black !important; 
+    color: black !important;
+    margin-bottom: 10px; 
 }
 
-
 ul.products li.product .button {
-    display: block;
-    margin-top: 10px;
+    display: inline-block;
+    margin-top: 20px;
     padding: 8px 16px;
     background-color: #007bff;
-    color: #000;
+    color: white;
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -58,3 +58,5 @@ ul.products li.product .button:hover {
 #sidebar ul{
     list-style: none;
 }
+
+

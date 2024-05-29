@@ -18,6 +18,9 @@
                 <h2>Tech Trend</h2>
                 <p> We are a residential interior design firm located 
                     in Sweden. Our boutique-store offers more than!</p>
+                    <p><strong>Adress:</strong> Teknikgatan, 111 22 Malmö</p>
+        <p><strong>Telefon:</strong> <a href="tel:+46123456789">+46 123 456 789</a></p>
+        <p><strong>E-post:</strong> <a href="mailto:info@techtrend.se">info@techtrend.se</a></p>
             </div>
             
             <div class="footer-shopping">
