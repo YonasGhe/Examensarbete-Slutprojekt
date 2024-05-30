@@ -1,10 +1,10 @@
 ul.products {
     list-style-type: none;
-    margin: 20px !important;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+   
 }
 
 ul.products li.product {
@@ -12,14 +12,23 @@ ul.products li.product {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 20%; 
+    width: 25%; 
     text-align: center;
     background-color: whitesmoke;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
+    
+    
+   
 }
 
+
+ul.products li.product:hover{
+    background-color: azure;
+    transition: all 2ms ease-in-out;
+    
+}
 ul.products li.product img {
     max-width: 100%;
     height: auto;
