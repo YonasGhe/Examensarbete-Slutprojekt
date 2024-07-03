@@ -1,10 +1,10 @@
+
 ul.products {
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   
 }
 
 ul.products li.product {
@@ -14,27 +14,36 @@ ul.products li.product {
     justify-content: space-between;
     width: 25%; 
     text-align: center;
-    background-color: whitesmoke;
+    background-color: silver !important;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
-    
-    
-   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden;  
+    transition: transform 0.3s ease;
 }
 
-
-ul.products li.product:hover{
-    background-color: azure;
-    transition: all 2ms ease-in-out;
-    
+ul.products li.product:hover {
+    transform: scale(1.05) !important; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important; 
+    background-color: lightblue !important;
 }
+
 ul.products li.product img {
+    display: block;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+    text-decoration: none;
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto 10px; 
+}
+
+ul.products li.product img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 ul.products li.product h2.woocommerce-loop-product__title {
@@ -64,8 +73,123 @@ ul.products li.product .button:hover {
     background-color: #0056b3;
 }
 
-#sidebar ul{
+ul.products li.product h2 {
+    color: #000;
+}
+
+#sidebar ul {
+    display: none;
     list-style: none;
 }
 
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heart-icon {
+    position: relative;
+}
+
+.heart-icon .wishlist-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+#sp-woo-product-slider-1067 {
+    position: relative;
+    padding: 20px 0;
+    background-color: transparent !important; 
+}
+
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.wpsf-product.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightslategray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.wpsf-product.swiper-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: darkgray;
+}
+
+.sp-wps-product-image-area {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sp-wps-product-image-area a.wps-product-image {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.sp-wps-product-image-area img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.sp-wps-product-image-area a.wps-product-image:hover img {
+    transform: scale(1.1);
+}
+
+.wpsf-product-title h2 {
+    font-size: 16px;
+    color: #333 !important;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.wpsf-product .price {
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.wpsf-product .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000 !important;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.wpsf-product .button:hover {
+    background-color: #0056b3 !important;
+}

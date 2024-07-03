@@ -14,6 +14,10 @@
     color: white;
 }
 
+    .wp-block-navigation__responsive-container-content li:hover{ 
+    color: wheat;
+}
+
 .wp-block-image.size-full.is-resized {
     background-color: black !important; 
     display: flex;
@@ -82,49 +86,126 @@
     background-color: #0056b3;
 }
 
-.wc-block-product-categories-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap; 
-    
-}
-
-.wc-block-product-categories-list-item {
-    margin-right: 30px; 
-    margin-bottom: 10px;
-    border-radius: 100px; 
-    background-color: #000;
-    overflow: hidden;
-    margin: 30px; 
-}
-
-.wc-block-product-categories-list-item a {
-    text-decoration: none;
-    color:whitesmoke; 
-    font-size: large;
-}
-
-.wc-block-product-categories-list-item-count {
-    margin-left: 5px;
-    font-size: 0.8em;
-    color: darkturquoise; 
-    font-size: large;
-}
-
-.wc-block-product-categories-list-item a:hover {
-    color: darkturquoise; 
-}
-.wc-block-product-categories-list-item:hover:before {
-    background-color: rgba(0, 0, 0, 0.1); 
-    
-}
-
 @media only screen and (max-width: 768px) {
     .wc-block-product-template__responsive li {
         flex: 0 0 100%; 
     }
 }
 
+.swiper-slide {
+    list-style: none;
+    padding: 0;
+    margin: 30px; 
+    border-radius: 100px; 
+    background-color: darkcyan; 
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    
+}
 
+.swiper-slide a {
+    text-decoration: none;
+    color: #fff !important;
+    font-size: large;
+    display: block; 
+    padding: 10px 20px; 
+}
+
+.swiper-slide .wc-block-product-categories-list-item-count {
+    margin-left: 5px;
+    font-size: large;
+    color: darkturquoise;
+}
+
+.swiper-slide a:hover {
+    color: darkturquoise;
+}
+
+.swiper-slide:hover {
+    background-color: darkviolet;
+}
+
+@media only screen and (max-width: 768px) {
+    .swiper-slide {
+        flex: 0 0 100%;
+        margin-bottom: 10px; 
+    }
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lightslategray; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+   background-color: darkgray; 
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .sp-wps-product-image-area {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .sp-wps-product-image-area a.wps-product-image {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .sp-wps-product-image-area img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .sp-wps-product-image-area a.wps-product-image:hover img {
+    transform: scale(1.1);
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .wpsf-product-title h3 {
+    font-size: 16px;
+    color: #000 !important;
+    margin: 10px 0;
+    text-align: center;
+}
+h3 a:hover {
+    color: #000 !important;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .wpsf-product .price {
+    font-size: 14px;
+    color: #000 !important;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .wpsf-product .button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000 !important;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+ul.wc-block-product-template__responsive li.wc-block-product .wpsf-product .button:hover {
+    background-color: #0056b3 !important;
+}

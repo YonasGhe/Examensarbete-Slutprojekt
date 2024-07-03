@@ -1,56 +1,20 @@
-
 jQuery(document).ready(function($) {
-    function updateCartIcon() {
-        
+    $(document).on('added_to_wishlist removed_from_wishlist', function() {
         $.ajax({
-            url: wc_cart_params.ajax_url,
-            type: 'POST',
+            url: ajax_object.ajax_url,
+            method: 'POST',
             data: {
-                action: 'get_cart_contents'
+                action: 'update_wishlist_count'
             },
             success: function(response) {
-                $('.cart-icon').html(response);
+                if (response.success) {
+                    if (response.data.count > 0) {
+                        $('.heart-icon .wishlist-count').text(response.data.count).show();
+                    } else {
+                        $('.heart-icon .wishlist-count').hide();
+                    }
+                }
             }
         });
-    }
-
-    updateCartIcon();
-
-    $(document.body).on('added_to_cart', function(event, fragments, cart_hash, $button) {
-        updateCartIcon();
     });
 });
-
-    jQuery(document).ready(function($) {
-        $('.heart-icon').click(function(e) {
-            e.preventDefault(); 
-    
-            var $heartIcon = $(this); 
-    
-            var productId = $heartIcon.data('product-id');
-            var isFavorite = $heartIcon.hasClass('favorite'); 
-            var action = isFavorite ? 'remove' : 'add'; 
-    
-    
-            $.ajax({
-                url: myAjax.ajaxurl, 
-                type: 'POST',
-                data: {
-                    action: 'update_favorite_products',
-                    product_id: productId,
-                    action_type: action
-                },
-                success: function(response) {    
-                    if (action === 'add') {
-                        $heartIcon.addClass('favorite'); 
-                    } else {
-                        $heartIcon.removeClass('favorite'); 
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('AJAX Error:', error);
-                }
-            });
-        });
-    });
-    

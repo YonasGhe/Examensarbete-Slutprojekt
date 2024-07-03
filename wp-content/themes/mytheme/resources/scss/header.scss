@@ -56,14 +56,17 @@
     align-items: center;
 }
 
-.menu-item-cart img,
 .menu-item-account img,
 .menu-item-heart img {
     width: 26px; 
     height: auto;
     margin-left: 10px; 
 }
-
+.menu-item-cart img {
+    width: 30px; 
+    height: auto;
+    margin-left: 10px;
+}
 
 header {
     margin: auto;
@@ -147,15 +150,26 @@ header {
 
 @media only screen and (max-width: 768px) {
     .main-navigation {
-        flex-direction: column; /* Stack items vertically on mobile */
+        flex-direction: column; 
     }
 
     .main-navigation .primary-menu {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 10px; /* Reduce space between items */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .main-navigation .primary-menu li a {
-        padding: 10px; /* Reduce padding */
+        padding: 10px; 
     }
+}
+
+.page-item-1144 {
+    display: none !important;
+}
+
+.page-item-1009{
+    display: none !important;
+}
+.page-item-1031{
+    display: none !important;
 }

@@ -21,15 +21,14 @@
                     )
                 );
                 ?>
-                <!-- Use your custom shortcodes for the icons -->
-                <li class="menu-item menu-item-cart">
-                    <?php echo do_shortcode('[cart_icon]'); ?>
+                <li class="menu-item menu-item-heart">
+                    <?php echo do_shortcode('[heart_icon]'); ?>
                 </li>
                 <li class="menu-item menu-item-account">
                     <?php echo do_shortcode('[account_icon]'); ?>
-                </li>
-                <li class="menu-item menu-item-heart">
-                    <?php echo do_shortcode('[heart_icon]'); ?>
+               </li>
+               <li class="menu-item menu-item-cart">
+                    <?php echo do_shortcode('[cart_icon]'); ?>
                 </li>
             </ul>
         </div>

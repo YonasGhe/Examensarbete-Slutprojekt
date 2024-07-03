@@ -116,6 +116,13 @@ _deprecated_file(
 			<?php endif; ?>
 		</ul>
 		<ul role="navigation">
+				<?php wp_list_pages( 'title_li=<h2>' . __( 'Pages' ) . '</h2>' ); ?>
+
+			<li><h2><?php _e( 'Archives' ); ?></h2>
+				<ul>
+				<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+				</ul>
+			</li>
 
 				<?php
 				wp_list_categories(
